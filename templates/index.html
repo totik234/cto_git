@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Погода</title>
+</head>
+<body>
+    <form action="/form_weather">
+        <p><input placeholder="Введите город" name="city" type="text">
+        <p><input type="submit" value="Отправить"></p>
+    </form>
+
+
+    {% if error%}
+        <p>{{error}}</p>
+    {% elif name %}
+        <p>Погода для города: {{name}} </p>
+        <p>Погодные условия: {{weather}}</p>
+        <p>Температура: {{temp}} C&#176;</p>
+        <p>Влажность воздуха: {{humidity}} %</p>
+        <p>Атмосферное давление: {{pressure}} мм рт.ст.</p>
+    {%else%}
+    {%endif%}
+</body>
+</html>
