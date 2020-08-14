@@ -2,7 +2,6 @@ import requests
 from flask import Flask
 from flask import render_template
 from flask import request
-from pyowm import OWM
 app = Flask(__name__)
 
 
@@ -44,4 +43,5 @@ def form_weather():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    # app.run(debug=True)
+    app.run()
